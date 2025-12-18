@@ -83,6 +83,30 @@ namespace PsychologyConsultationApp
             this.Cursor = Cursors.Default;
         }
 
+        private void lblBack_Click(object sender, EventArgs e)
+        {
+            if (this.Owner is StartForm startForm)
+            {
+                startForm.Show();
+            }
+            else
+            {
+                new StartForm().Show();
+            }
+
+            this.Close();
+        }
+
+        private void lblBack_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void lblBack_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
+        }
+
         private void label1_Click(object sender, EventArgs e)
         {
             // Başlık etiketi için özel bir işlem gerekmiyor

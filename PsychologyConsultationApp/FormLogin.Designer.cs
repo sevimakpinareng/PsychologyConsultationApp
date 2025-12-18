@@ -35,6 +35,7 @@
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnlLoginBox = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblBack = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnLogin = new Guna.UI2.WinForms.Guna2Button();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
@@ -78,10 +79,11 @@
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 2;
             this.guna2PictureBox1.TabStop = false;
-            // 
+            //
             // pnlLoginBox
-            // 
+            //
             this.pnlLoginBox.BackColor = System.Drawing.Color.Transparent;
+            this.pnlLoginBox.Controls.Add(this.lblBack);
             this.pnlLoginBox.Controls.Add(this.guna2HtmlLabel1);
             this.pnlLoginBox.Controls.Add(this.btnLogin);
             this.pnlLoginBox.Controls.Add(this.txtPassword);
@@ -110,9 +112,25 @@
             this.guna2HtmlLabel1.Click += new System.EventHandler(this.guna2HtmlLabel1_Click);
             this.guna2HtmlLabel1.MouseEnter += new System.EventHandler(this.guna2HtmlLabel1_MouseEnter);
             this.guna2HtmlLabel1.MouseLeave += new System.EventHandler(this.guna2HtmlLabel1_MouseLeave);
-            // 
+            //
+            // lblBack
+            //
+            this.lblBack.BackColor = System.Drawing.Color.Transparent;
+            this.lblBack.CausesValidation = false;
+            this.lblBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(108)))), ((int)(((byte)(247)))));
+            this.lblBack.Location = new System.Drawing.Point(64, 300);
+            this.lblBack.Name = "lblBack";
+            this.lblBack.Padding = new System.Windows.Forms.Padding(0, 0, 0, 20);
+            this.lblBack.Size = new System.Drawing.Size(185, 38);
+            this.lblBack.TabIndex = 5;
+            this.lblBack.Text = "Geri dön: <b> PsikoPanel</b>";
+            this.lblBack.UseSystemCursors = true;
+            this.lblBack.Click += new System.EventHandler(this.lblBack_Click);
+            this.lblBack.MouseEnter += new System.EventHandler(this.lblBack_MouseEnter);
+            this.lblBack.MouseLeave += new System.EventHandler(this.lblBack_MouseLeave);
+            //
             // btnLogin
-            // 
+            //
             this.btnLogin.BorderRadius = 5;
             this.btnLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -232,6 +250,7 @@
         private Guna.UI2.WinForms.Guna2Button btnLogin;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2Button btnClose;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblBack;
     }
 }
 
