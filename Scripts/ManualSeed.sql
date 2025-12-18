@@ -1,4 +1,5 @@
--- Ensures base tables exist and adds missing columns before seeding specialists
+-- Run this script in the target database context before testing merges.
+-- It adds the Specialty column when missing so the MERGE below succeeds.
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Users')
 BEGIN
     CREATE TABLE dbo.Users(
