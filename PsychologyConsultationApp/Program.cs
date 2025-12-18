@@ -16,7 +16,8 @@ namespace PsychologyConsultationApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormLogin());
+            DataInitializer.EnsureDatabase();
+            Application.Run(new StartForm());
         }
     }
 }

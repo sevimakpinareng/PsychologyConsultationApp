@@ -180,6 +180,7 @@
             this.guna2Button1.Size = new System.Drawing.Size(200, 40);
             this.guna2Button1.TabIndex = 5;
             this.guna2Button1.Text = "KAYIT OL";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // guna2HtmlLabel2
             // 
