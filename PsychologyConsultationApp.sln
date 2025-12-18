@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35828.75 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PsychologyConsultationApp", "PsychologyConsultationApp\PsychologyConsultationApp.csproj", "{77975DBB-87C7-4D5C-AD02-597248824875}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{77975DBB-87C7-4D5C-AD02-597248824875}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77975DBB-87C7-4D5C-AD02-597248824875}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77975DBB-87C7-4D5C-AD02-597248824875}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77975DBB-87C7-4D5C-AD02-597248824875}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CB164A05-B769-41CD-A394-A72361FF60CA}
+	EndGlobalSection
+EndGlobal
