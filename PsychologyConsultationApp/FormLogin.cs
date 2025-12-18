@@ -67,5 +67,37 @@ namespace PsychologyConsultationApp
                 }
             }
         }
+
+        private void pnlLoginBox_Paint(object sender, PaintEventArgs e)
+        {
+            // Tasarımsal çizimler için boş bırakıldı
+        }
+
+        private void guna2HtmlLabel1_Click(object sender, EventArgs e)
+        {
+            FormRegister register = new FormRegister();
+            register.Show();
+            this.Hide();
+        }
+
+        private void guna2HtmlLabel1_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void guna2HtmlLabel1_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            // Başlık etiketi için özel bir işlem gerekmiyor
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
