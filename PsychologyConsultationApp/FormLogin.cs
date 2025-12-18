@@ -18,12 +18,18 @@ namespace PsychologyConsultationApp
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtEmail.Text) || string.IsNullOrWhiteSpace(txtPassword.Text))
+            {
+                MessageBox.Show("E-posta ve şifre boş bırakılamaz.");
+                return;
+            }
+
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
 
-                string query = @"SELECT Id, FullName, Role FROM dbo.Users 
-                                 WHERE Email=@email AND PasswordHash=@password";
+                string query = @"SELECT Id, FullName FROM dbo.Users
+                                 WHERE Email=@email AND PasswordHash=@password AND Role='Hasta'";
 
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@email", txtEmail.Text);
@@ -35,29 +41,11 @@ namespace PsychologyConsultationApp
                 {
                     int userId = Convert.ToInt32(dr["Id"]);
                     string fullName = dr["FullName"].ToString();
-                    string role = dr["Role"].ToString();
 
-                    MessageBox.Show("Giriş başarılı: " + role);
-
-                    if (role == "Hasta")
-                    {
-                        PatientDashboard p = new PatientDashboard();
-                        p.LoggedUserId = userId;
-                        p.LoggedUserName = fullName;
-                        p.Show();
-                    }
-                    else if (role == "Uzman")
-                    {
-                        SpecialistDashboard s = new SpecialistDashboard();
-                        s.LoggedUserId = userId;
-                        s.LoggedUserName = fullName;
-                        s.Show();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Bu role özel panel yok: " + role);
-                        return;
-                    }
+                    PatientDashboard p = new PatientDashboard();
+                    p.LoggedUserId = userId;
+                    p.LoggedUserName = fullName;
+                    p.Show();
 
                     this.Hide();
                 }
